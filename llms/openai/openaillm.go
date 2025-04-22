@@ -114,10 +114,8 @@ func (o *LLM) GenerateContent(ctx context.Context, messages []llms.MessageConten
 		Metadata:             opts.Metadata,
 	}
 
-	if opts.ThinkingBudget > 0 {
-		req.GenerationCfg = &openaiclient.GenerationConfig{}
-		req.GenerationCfg.ThinkingConfig.ThinkingBudget = opts.ThinkingBudget
-	}
+	req.GenerationCfg = &openaiclient.GenerationConfig{}
+	req.GenerationCfg.ThinkingConfig.ThinkingBudget = opts.ThinkingBudget
 
 	if opts.JSONMode {
 		req.ResponseFormat = ResponseFormatJSON
