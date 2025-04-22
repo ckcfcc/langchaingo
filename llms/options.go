@@ -69,6 +69,9 @@ type CallOptions struct {
 	// Supported MIME types are: text/plain: (default) Text output.
 	// application/json: JSON response in the response candidates.
 	ResponseMIMEType string `json:"response_mime_type,omitempty"`
+
+	// Gemini 2.5 flash or high
+	ThinkingBudget int `json:"thinkingBudget, omitempty"`
 }
 
 // Tool is a tool that can be used by the model.
@@ -114,6 +117,13 @@ const (
 	// FunctionCallBehaviorAuto will call functions automatically.
 	FunctionCallBehaviorAuto FunctionCallBehavior = "auto"
 )
+
+// WithThinkingBudget specifies google gemini 2.5 flash or higher budget of thinking
+func WithThinkingBudget(thinkingBudget int) CallOption {
+	return func(o *CallOptions) {
+		o.ThinkingBudget = thinkingBudget
+	}
+}
 
 // WithModel specifies which model name to use.
 func WithModel(model string) CallOption {
