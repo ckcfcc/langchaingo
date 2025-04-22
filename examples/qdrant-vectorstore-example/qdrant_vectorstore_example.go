@@ -6,11 +6,11 @@ import (
 	"log"
 	"net/url"
 
-	"github.com/tmc/langchaingo/embeddings"
-	"github.com/tmc/langchaingo/llms/openai"
-	"github.com/tmc/langchaingo/schema"
-	"github.com/tmc/langchaingo/vectorstores"
-	"github.com/tmc/langchaingo/vectorstores/qdrant"
+	"github.com/ckcfcc/langchaingo/embeddings"
+	"github.com/ckcfcc/langchaingo/llms/openai"
+	"github.com/ckcfcc/langchaingo/schema"
+	"github.com/ckcfcc/langchaingo/vectorstores"
+	"github.com/ckcfcc/langchaingo/vectorstores/qdrant"
 )
 
 func main() {

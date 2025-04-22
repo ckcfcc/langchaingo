@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/tmc/langchaingo/httputil"
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/llms/openai"
+	"github.com/ckcfcc/langchaingo/httputil"
+	"github.com/ckcfcc/langchaingo/llms"
+	"github.com/ckcfcc/langchaingo/llms/openai"
 )
 
 var flagDebugHTTP = flag.Bool("debug-http", true, "enable debugging of HTTP requests and responses")

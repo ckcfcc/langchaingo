@@ -3,8 +3,8 @@ package callbacks
 import (
 	"context"
 
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/schema"
+	"github.com/ckcfcc/langchaingo/llms"
+	"github.com/ckcfcc/langchaingo/schema"
 )
 
 // Handler is the interface that allows for hooking into specific parts of an

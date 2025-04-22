@@ -6,9 +6,9 @@ import (
 	"log"
 	"os"
 
+	"github.com/ckcfcc/langchaingo/llms"
+	"github.com/ckcfcc/langchaingo/llms/openai"
 	"github.com/joho/godotenv"
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/llms/openai"
 )
 
 func main() {
