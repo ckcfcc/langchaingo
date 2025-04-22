@@ -19,12 +19,6 @@ const (
 
 var ErrContentExclusive = errors.New("only one of Content / MultiContent allowed in message")
 
-type GenerationConfig struct {
-	ThinkingConfig struct {
-		ThinkingBudget int `json:"thinkingBudget,omitempty"`
-	} `json:"thinkingConfig,omitempty"`
-}
-
 type StreamOptions struct {
 	// If set, an additional chunk will be streamed before the data: [DONE] message.
 	// The usage field on this chunk shows the token usage statistics for the entire request,
@@ -84,9 +78,6 @@ type ChatRequest struct {
 
 	// Metadata allows you to specify additional information that will be passed to the model.
 	Metadata map[string]any `json:"metadata,omitempty"`
-
-	// gemini 2.5 flash or higher
-	GenerationCfg *GenerationConfig `json:"generationConfig,omitempty"`
 }
 
 // ToolType is the type of a tool.
